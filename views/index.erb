@@ -131,7 +131,7 @@
       <% if @user %>
           <p id="picture" style="background-image: url(https://graph.facebook.com/<%= @user['id'] %>/picture?type=normal)"></p>
           <div>
-            <h1>How NOVA are you?<strong><%= @user['name'] %></strong></h1>
+            <h1>Welcome, HELLO WHAT THE FUCK <strong><%= @user['name'] %></strong></h1>
             <p class="tagline">
               This is your app
               <a href="<%= @app['@app'] %>"><%= @app['name'] %></a>
@@ -159,7 +159,7 @@
           </div>
       <% else %>
         <div>
-          <h1>How NOVA are you?</h1>
+          <h1>Welcome</h1>
           <div class="fb-login-button" data-scope="<%= FACEBOOK_SCOPE %>">Log In</div>
 
         </div>
@@ -168,8 +168,8 @@
     </header>
 
     <section id="get-started">
-      <p>They say you are who your friends are, but find out exactly how many NOVA  you have.</span>!</p>
-      <a href="https://devcenter.heroku.com/articles/facebook?utm_source=facebook&utm_medium=app&utm_campaign=fb_integration" target="_top" class="button">Test my NOVAness</a>
+      <p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
+      <a href="https://devcenter.heroku.com/articles/facebook?utm_source=facebook&utm_medium=app&utm_campaign=fb_integration" target="_top" class="button">Learn How to Edit This App</a>
     </section>
 
 
