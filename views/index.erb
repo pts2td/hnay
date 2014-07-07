@@ -132,7 +132,7 @@
 
       window.fbAsyncInit = function() {
       FB.init({
-        appId      : '1484882331748594',
+        appId      : '<%= @app['id'] %>',
         cookie     : true,  // enable cookies to allow the server to access 
                             // the session
         xfbml      : true,  // parse social plugins on this page
@@ -188,8 +188,8 @@
     <script type="text/javascript">
       window.fbAsyncInit = function() {
         FB.init({
-          appId      : "<%= @app[] %>",                     // App ID
-          channelUrl : "<%= url_no_scheme() %>", // Channel File
+          appId      : "<%= @app['id'] %>",                     // App ID
+          channelUrl : "<%= url_no_scheme('/channel.html') %>", // Channel File
           status     : true,                                    // check login status
           cookie     : true,                                    // enable cookies to allow the server to access the session
           xfbml      : true                                     // parse XFBML
