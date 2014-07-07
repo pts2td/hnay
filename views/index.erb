@@ -96,7 +96,7 @@
 
 
 
-
+      <!--
       <script type="text/javascript">
       // This is called with the results from from FB.getLoginStatus().
       function statusChangeCallback(response) {
@@ -132,7 +132,7 @@
 
       window.fbAsyncInit = function() {
       FB.init({
-        appId      : '<%= @app['id'] %>',
+        appId      : '<%= @app[] %>',
         cookie     : true,  // enable cookies to allow the server to access 
                             // the session
         xfbml      : true,  // parse social plugins on this page
@@ -177,6 +177,7 @@
         });
       }
     </script>
+         -->
 
 
 
@@ -184,12 +185,11 @@
 
 
 
-    <!--
     <script type="text/javascript">
       window.fbAsyncInit = function() {
         FB.init({
-          appId      : "<%= @app[] %>",                     // App ID
-          channelUrl : "<%= url_no_scheme() %>", // Channel File
+          appId      : "<%= @app['id'] %>",                     // App ID
+          channelUrl : "<%= url_no_scheme('/channel.html') %>", // Channel File
           status     : true,                                    // check login status
           cookie     : true,                                    // enable cookies to allow the server to access the session
           xfbml      : true                                     // parse XFBML
@@ -217,8 +217,8 @@
         js.src = "//connect.facebook.net/en_US/all.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-    </script>  -->
-  
+    </script>
+
     <header class="clearfix">
       <% if @user %>
           <p id="picture" style="background-image: url(https://graph.facebook.com/<%= @user['id'] %>/picture?type=normal)"></p>
